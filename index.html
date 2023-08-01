@@ -3,6 +3,11 @@
     <title>My Site (totally working title)</title>
     <link rel="icon" href="/images/smiley.gif">
     <style>
+      html {
+	background-color: #000;
+	background-image: url("/images/bg5.jpg")
+      }
+	    
       h1 {
         text-align: center;
         color: #fff;
@@ -24,15 +29,16 @@
       .everything-contain {
         left: 50%;
         width: 45%;
-        min-height: 54%;
+        min-height: 100%;
         transform: translateX(calc(50vw - 50%));
       }
       .main-contain {
         background-color: red;
         width: 100%;
-        height: 100%;
+        min-height: 100%;
         padding: 5px;
         display: flex;
+	overflow-y: auto;
       }
 
       .content-contain {
@@ -51,6 +57,7 @@
       .sidebar-contain {
         background-color: blue;
         width: 30%;
+	height: 100%;
         height: calc(100% - 10px);
         margin: 5px;
         border-right: double 6px #fff;
